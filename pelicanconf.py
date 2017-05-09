@@ -7,6 +7,7 @@ SITENAME = "Guy Nadav's Blog"
 SITEURL = ''
 
 PATH = 'content'
+STATIC_PATHS = ['images']
 
 TIMEZONE = 'Asia/Jerusalem'
 
