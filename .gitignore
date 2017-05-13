@@ -1,5 +1,5 @@
-# Blog's virtual environment
-blog_virt_env/
+# Ignore output folder which is automatically created by running "pelican content"
+output/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
