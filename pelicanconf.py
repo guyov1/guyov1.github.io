@@ -6,6 +6,16 @@ AUTHOR = 'Guy Nadav'
 SITENAME = "Guy Nadav's Blog"
 SITEURL = ''
 
+#THEME = "/media/ubuntu/ULTRA-FIT/Dropbox/Blog/jupyter-blog/pelican-themes/mnmlist"
+#THEME = "pelican-themes/mnmlist"
+#THEME = "pelican-themes/genus"
+THEME = "pelican-themes/clean-blog"
+
+SOCIAL = (('github', 'https://github.com/guyov1'),
+          ('linkedin','https://www.linkedin.com/in/guynadav/'),
+          ('envelope','mailto:guyov1@gmail.com'))
+SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = False
+
 PATH = 'content'
 STATIC_PATHS = ['images']
 
@@ -21,14 +31,14 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+#LINKS = (('Pelican', 'http://getpelican.com/'),
+#         ('Python.org', 'http://python.org/'),
+#         ('Jinja2', 'http://jinja.pocoo.org/'),
+#         ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+#SOCIAL = (('You can add links in your config file', '#'),
+#          ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
 
@@ -41,4 +51,6 @@ MARKUP = ('md', 'ipynb')
 #PLUGIN_PATH = './plugins'
 #PLUGINS = ['ipynb.markup']
 PLUGIN_PATHS = ['./pelican-plugins', './plugins']
-PLUGINS = ['ipynb.markup']
+PLUGINS = ['ipynb.markup', 'pelican_comment_system']
+PELICAN_COMMENT_SYSTEM = True
+
