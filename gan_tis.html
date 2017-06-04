@@ -35,7 +35,7 @@
 
 
 
-        <meta name="tags" contents="python article deep-learning auto-encoder gan" />
+        <meta name="tags" contents="python article deep-learning text-to-image-synthesis gan" />
 
 
 			<meta property="og:locale" content="en">
@@ -43,11 +43,11 @@
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="/aeg.html">
-	<meta property="og:title" content="Adversarial Generator-Encoder Networks">
+	<meta property="og:url" content="/gan_tis.html">
+	<meta property="og:title" content="Generative Adversarial Text to Image Synthesis">
 	<meta property="og:description" content="">
 	<meta property="og:image" content="/">
-	<meta property="article:published_time" content="2017-05-09 20:00:00+03:00">
+	<meta property="article:published_time" content="2017-06-04 21:00:00+03:00">
 </head>
 
 <body>
@@ -83,10 +83,10 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Adversarial Generator-Encoder Networks</h1>
+                        <h1>Generative Adversarial Text to Image Synthesis</h1>
                         <span class="meta">Posted by
                                 <a href="/author/guy-nadav.html">Guy Nadav</a>
-                             on ג' 09 מאי 2017
+                             on א' 04 יוני 2017
                         </span>
                         
                     </div>
@@ -1078,11 +1078,10 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Preface">Preface<a class="anchor-link" href="#Preface">¶</a></h1><p>Hello and welcome to my first blog post!! <br />
-First, I would like to recommend the following <a href="https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/">blog post</a> on how to start your first blog. <br />
-This will allow you to write everything as a simple ipython notebook, brilliant!</p>
-<p>Today, I will review the excellent article named <a href="https://arxiv.org/pdf/1704.02304.pdf">Adversarial Generator-Encoder Networks</a>, by Dmitry Ulyanov.</p>
-<p>First, some motivation. Imagine you could create an interpolated face between any two persons you desire. Say, you want to see how a future child could possibly look like by interpolating the faces of the parents.</p>
+<h1 id="I-Love-GAN">I Love GAN<a class="anchor-link" href="#I-Love-GAN">¶</a></h1><p>MY appetie for GAN surely increased since <a href="https://guyov1.github.io/aeg.html">reviewing Advarsarial Generator Encoder (AEG) Networks</a> on my last blog post <br />
+Today, I will review a second fresh article in the subject, named <a href="https://arxiv.org/pdf/1605.05396.pdf">Generative Advarsarial Text to Image Synthesis</a>, by Scot Reed et al. <br />
+As far as I understand, this is the best attemp so far in synthesizing plausible images directly from text. <br />
+As always, we will start with a teaser image, to show what we aim to do here. Notice that the left column is of unseen text descriptors(!).</p>
 </div>
 </div>
 </div>
@@ -1091,8 +1090,10 @@ This will allow you to write everything as a simple ipython notebook, brilliant!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="aeg" height="300" src="/images/aeg/AEG-face_interp.png" width="650" /></p>
-<p class="caption">Figure 1 - Interpolating pairs of faces using AEG</p>
+<p><img alt="gan_its" height="300" src="/images/gan_tis/gan_tis_figure_1.png" width="650" /></p>
+<p class="caption">Figure 1 - Examples of generated images from text descriptions.
+Left:  captions are from zero-shot (held out) categories,  unseen
+text. Right: captions are from the training set</p>
 </div>
 </div>
 </div>
