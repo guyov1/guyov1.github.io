@@ -1091,7 +1091,7 @@ Notice that the left column is of unseen text descriptors (!).</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="gan_its" height="300" src="/images/gan_tis/gan_tis_figure_1.png" width="450" /></p>
+<p><img alt="gan_tis" height="300" src="/images/gan_tis/figure_1.png" width="450" /></p>
 <p class="caption">Figure 1 - Examples of generated images from text descriptions.
 Left:  captions are from zero-shot (held out) categories,  unseen
 text. Right: captions are from the training set</p>
@@ -1109,14 +1109,26 @@ One of the things GAN enables us to do, is to generate good looking images, whic
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="How-to-use-text-to-generate-images?">How to use text to generate images?<a class="anchor-link" href="#How-to-use-text-to-generate-images?">¶</a></h1><h2 id="Text-descriptor">Text descriptor<a class="anchor-link" href="#Text-descriptor">¶</a></h2><p>We want to generate images conditioned on text. For that reason, we must consider the problems that may arise in doing so. <br />
+First, we need to understand that we cant use any text feature for our purpose. <br>
+We need to distill the visual information out of the text. To do that, in the article, they use a text descriptor that is generated conditioned on a matching visual image. <br />
+The text descriptor is based on deep convolutional and recurrent networks, for more information refer to their article, named <a href="https://arxiv.org/pdf/1605.05395.pdf">Learning Deep Representations of Fine-Grained Visual Descriptions</a>.
+Second, one should realize that generating images conditioned on text is a multimodal problem, i.e. - one text description can result in many images that satisfy what is described.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="gan_tis" height="300" src="{attach}/images/gan_tis/figure_1_1.png" width="450" /></p>
+<p class="caption">Figure 2 -Images conditioned on text are highly multimodal</p>
 </div>
 </div>
 </div>
